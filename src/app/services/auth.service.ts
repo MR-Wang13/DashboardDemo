@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AuthService {
 
 
-  private host = "http://localhost:5000";
+  private host = "http://my-springboot-env.eba-bkzikp3p.us-east-1.elasticbeanstalk.com";
  
   private checkAuthUrl = this.host + "/api/clinicians/validateLogin"
 
