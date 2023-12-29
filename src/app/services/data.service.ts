@@ -8,7 +8,7 @@ import { Record } from '../home/home.component';
 export class DataService {
 
 
-  private host = "http://localhost:5000";
+  private host = "http://my-springboot-env.eba-bkzikp3p.us-east-1.elasticbeanstalk.com";
  
   private getDashBoardRecordUrl = this.host + "/api/attacks/getDashboardList"
 
