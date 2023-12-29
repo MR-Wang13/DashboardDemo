@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MatCardModule } from '@angular/material/card';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { MatToolbarModule} from  '@angular/material/toolbar';
 import { MatButtonModule} from  '@angular/material/button';
 import { MatInputModule} from  '@angular/material/input';
@@ -38,7 +38,7 @@ import { NgChartsModule } from 'ng2-charts';
     FormsModule,
     MatToolbarModule,MatButtonModule,MatIconModule,MatDialogModule,MatInputModule,
     MatTableModule,MatMenuModule,MatProgressSpinnerModule,BrowserAnimationsModule,
-    HttpClientModule,MatPaginatorModule, NgChartsModule
+    HttpClientModule,MatPaginatorModule, NgChartsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

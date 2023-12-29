@@ -7,6 +7,7 @@ import { DetailDialogComponent } from '../detail-dialog/detail-dialog.component'
 import { MatDialog } from '@angular/material/dialog';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartData, ChartOptions } from 'chart.js';
+import { Router } from '@angular/router';
 
 export interface Record {
   participantId: number; 
@@ -54,7 +55,7 @@ chartOptions: ChartOptions = {
  }
 
 
-  constructor(private dataService:DataService,
+  constructor(public router: Router,private dataService:DataService,
     public dialog: MatDialog){}
   ngOnInit(): void {
  
@@ -74,5 +75,10 @@ chartOptions: ChartOptions = {
       width: '50vw',
       data: row
     });
+  }
+
+  logOut() {
+    sessionStorage.removeItem('access_token'); 
+    this.router.navigate(['/login']); 
   }
 }

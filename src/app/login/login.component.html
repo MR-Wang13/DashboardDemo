@@ -5,7 +5,6 @@
      
 </mat-toolbar>
 
-
 <div class="card-container">
     <div class="card-content">
 
@@ -14,7 +13,10 @@
           <mat-card-title>Login</mat-card-title>
         </mat-card-header>
         <mat-card-content>
+
           <form class="example-form">
+            <img src="../../assets/userIcon.jpeg" class="user-icon">
+
             <table class="example-full-width" cellspacing="0">
               <tr>
                 <td>
@@ -28,6 +30,12 @@
                 <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
               </mat-form-field></td>
             </tr></table>
+            <div *ngIf="showEmtyError" class="error-message">
+              Both username and password are required.
+            </div>
+            <div *ngIf="showResError" class="error-message">
+              {{resErrMsg}}
+            </div>
           </form>
           <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
         </mat-card-content>
