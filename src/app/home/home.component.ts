@@ -57,7 +57,7 @@ chartOptions: ChartOptions = {
   constructor(private dataService:DataService,
     public dialog: MatDialog){}
   ngOnInit(): void {
-
+ 
     this.dataService.getRecordList().subscribe((data: Record[])=>{
       this.dataSource.data = data;
     });
